@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+.conteiner{
+    /* display: flex;
+    flex-direction: row; /*column (fica em baixo) - row (fica do lado)*/ /* direção do fex*/
+    /* justify-content: center; /*space-beetwen (para bota nos canto e meio)*/  /*justify baixo cima*/
+    /* align-items: center; align-items:  esquerda e direita  */ 
+    /* background-color: tomato;
+    height: 500px; */
+    display:flex;
+    flex-wrap:wrap;
+    gap: 16px; /*espaço entre as imagens*/ 
+    padding:16;
+}
+.conteiner div {
+    height: 500px;
+    /* width: 600px; */
+    flex-grow: 1; /*estica p caber*/
+    overflow: hidden; /*tudo q esta dentro da caixa da imagem fica na margem e n sai*/
+}
+.conteiner img {
+    height: 100%;
+    width: 100%;
+    filter: grayscale(1); /*deixa as imagens cinza*/
+    transition: 1s; /*fazer transição*/
+}
+.conteiner img:hover{ /*só p quando passar o mouse*/
+    filter: grayscale(0); /*deixar colorido quando mouse passar*/
+    transform: scale(2);
+}
